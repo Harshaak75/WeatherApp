@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import brokenclouds from "../../assets/brokenclouds.png";
 import overcastclouds from "../../assets/overcastclouds.png";
 import scatteredclouds from "../../assets/scatteredclouds.png";
-import haze from "../../assets/haze.png";
+import Haze from "../../assets/Haze.png"; 
 import moderaterain from "../../assets/moderaterain.png";
 
 import { useWeatherData } from "../../Context";
@@ -37,13 +37,13 @@ function WeatherList({ weather, time }) {
         brokenclouds,
         overcastclouds,
         scatteredclouds,
-        haze,
+        Haze,
         moderaterain,
     };
 
 
 
-    const image = weatherImages[src] || haze;
+    const image = weatherImages[src] || Haze;
 
     const send_data = {
         weatherId: weather.id,
