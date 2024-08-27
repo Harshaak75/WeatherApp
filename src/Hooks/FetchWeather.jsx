@@ -5,9 +5,7 @@ function FetchWeather(cityName) {
   const [data, setdata] = useState();
   
 
-  const api = import.meta.env.WEATHER_API;
-
-  console.log(api)
+  const api = import.meta.env.VITE_WEATHER_API;
 
   useEffect(() =>{
     if (!cityName) return; 
@@ -16,6 +14,7 @@ function FetchWeather(cityName) {
 
       setLoading(true); 
       try {
+        console.log("api",api)
         const response = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=${cityName},in&units=metric&appid=${api}`
         );
