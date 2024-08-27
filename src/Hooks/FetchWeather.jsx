@@ -17,7 +17,6 @@ function FetchWeather(cityName) {
 
       setLoading(true); 
       try {
-        console.log("api",api)
         const response = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=${cityName},in&units=metric&appid=${api}`
         );
