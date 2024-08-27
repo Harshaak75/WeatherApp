@@ -3,9 +3,12 @@ import React, { useEffect, useState } from 'react'
 function FetchWeather(cityName) {
   const [loading, setLoading] = useState(false);
   const [data, setdata] = useState();
-  
 
-  const api = import.meta.env.VITE_WEATHER_API;
+  // change this later
+  let a;
+
+  const api = "be0ea197818aa49864908df64ad7c955";
+  // const api = "your_api_key"; // replace with your actual API key
 
   useEffect(() =>{
     if (!cityName) return; 
